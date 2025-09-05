@@ -1,0 +1,101 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height:1.6
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #004d40;
+    color: white;
+}
+
+header .logo {
+    width: 40px;
+}
+
+.site-name {
+    font-weight: boold;
+    margin-left: 0.5rem;
+}
+
+nav {
+    display: none;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0.5rem 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+#menu {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+.active {
+    text-decoration: underline;
+}
+
+main {
+    padding: 1rem;
+}
+
+/* About Me */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.student-photo {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #eee;
+    margin-top: 2rem;
+}
+
+.social {
+    margin-bottom: 0.5rem;
+}
+
+.social a {
+    margin: 0 8px;
+    display: inline-block;
+}
+
+.icon {
+    width: 32px;   
+    height: 32px;
+    transition: transform 0.2 ease;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}

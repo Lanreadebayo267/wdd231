@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Course Home Page for WDD231 by Olanrewaju Adebayo">
+    <meta name="author" content="Olanrewaju Adebayo">
+    <title>WDD231 Course Home Page</title>
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/logo.svg" alt="Site Logo" class="logo">
+        <span class="site-name">Olanrewaju Adebayo</span>
+        <button id="menu" aria-label="Menu">&#9776;</button>
+        <nav>
+            <ul class="navigation">
+                <li><a href=index.html class="active">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="#">Final</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+
+        <!-- About Me Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-container">
+                <img src="images/student.jpg" alt="Photo of Olanrewaju Adebayo" class="student-photo">
+                <p>
+                    Hello! My name is <strong>Olanrewaju Adebayo</strong>.
+                    I'm a web development student passionate about building modern, responsive websites 
+                    and learning new technologies. This course home page showcases my progress 
+                    and links to my upcoming Chamber of Commerce and Final projects.
+                </p>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section>
+            <h2>My Courses</h2>
+            <div id="coursebuttons">
+                <button id="all">All Courses</button>
+                <button id="wdd">WDD Courses</button>
+                <button id="cse">CSE Courses</button>
+            </div>
+            <div id="courses"></div>
+            <p>Total Credits: <span id="totalCredits">6</span></p>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Social Icons -->
+        <div class="social">
+            <a href="https://github.com/Lanreadebayo267" target="_blank" aria-label="GitHub">
+                <img src="images/github.png" alt="GitHub icon" class="icon">
+            </a>
+            <a href="https://www.linkedin.com/in/lanre-adebayo-03a522299" target="_blank" aria-label="LinkedIn">
+                <img src="images/linkedin.jpg" alt="LinkedIn Icon" class="icon">
+            </a>
+        </div>
+        <p>&copy; <span id="currentyear"></span> | Olanrewaju Adebayo | Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
