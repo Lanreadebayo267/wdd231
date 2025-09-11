@@ -1,8 +1,8 @@
-// Example course data (add or remove courses and set completed true/false)
+// Example course data (add description for interactivity)
 const courses = [
-  { code: "WDD130", name: "Web Fundamentals", credits: 3, category: "wdd", completed: true },
-  { code: "CSE111", name: "Programming with Functions", credits: 3, category: "cse", completed: true },
-  { code: "WDD231", name: "Web Frontend Development I", credits: 3, category: "wdd", completed: false }
+  { code: "WDD130", name: "Web Fundamentals", credits: 3, category: "wdd", completed: true, description: "Introduction to web technologies, HTML, CSS, and responsive design." },
+  { code: "CSE111", name: "Programming with Functions", credits: 3, category: "cse", completed: true, description: "Python programming with functions, conditionals, loops, and testing." },
+  { code: "WDD231", name: "Web Frontend Development I", credits: 3, category: "wdd", completed: false, description: "Modern frontend development with JavaScript, accessibility, and responsive layouts." }
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -12,25 +12,43 @@ document.addEventListener("DOMContentLoaded", () => {
   function displayCourses(filter) {
     coursesDiv.innerHTML = "";
 
-    // filter the courses to be displayed
     const filtered = courses.filter(course => filter === "all" || course.category === filter);
 
-    // create course elements
     filtered.forEach(course => {
-      const div = document.createElement("div");
-      div.textContent = `${course.code}: ${course.name} (${course.credits} credits)`;
-      if (course.completed) {
-        div.classList.add("completed");
-        const badge = document.createElement("span");
-        badge.textContent = " ✓ completed";
-        badge.setAttribute("aria-hidden", "true");
-        badge.style.marginLeft = "0.5rem";
-        div.appendChild(badge);
-      }
-      coursesDiv.appendChild(div);
+      const card = document.createElement("div");
+      card.classList.add("course-card");
+      if (course.completed) card.classList.add("completed");
+
+      // summary line
+      const summary = document.createElement("div");
+      summary.classList.add("course-summary");
+      summary.textContent = `${course.code}: ${course.name} (${course.credits} credits)`;
+      
+      // expand icon
+      const toggle = document.createElement("span");
+      toggle.classList.add("toggle");
+      toggle.textContent = "+";
+      summary.appendChild(toggle);
+
+      // hidden details
+      const details = document.createElement("div");
+      details.classList.add("course-details");
+      details.innerHTML = `
+        <p>${course.description}</p>
+        <p><strong>Status:</strong> ${course.completed ? "Completed ✅" : "In Progress 🚀"}</p>
+      `;
+
+      // toggle functionality
+      summary.addEventListener("click", () => {
+        details.classList.toggle("open");
+        toggle.textContent = details.classList.contains("open") ? "−" : "+";
+      });
+
+      card.appendChild(summary);
+      card.appendChild(details);
+      coursesDiv.appendChild(card);
     });
 
-    // total calculated with reduce (required by rubric)
     const total = filtered.reduce((acc, c) => acc + (c.credits || 0), 0);
     totalCredits.textContent = total;
   }
@@ -39,6 +57,5 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("wdd").addEventListener("click", () => displayCourses("wdd"));
   document.getElementById("cse").addEventListener("click", () => displayCourses("cse"));
 
-  // Default load
   displayCourses("all");
 });

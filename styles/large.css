@@ -1,6 +1,7 @@
 @media (min-width: 600px) {
     nav {
         display: block !important;
+        background: none;
     }
 
     nav ul {
@@ -13,7 +14,7 @@
     }
 
     main {
-        max-width: 900px;
+        max-width: 1000px;
         margin: auto;
     }
 
@@ -21,7 +22,7 @@
     .about-container {
         flex-direction: row;
         text-align: left;
-        gap: 1.5rem;
+        gap: 2rem;
     }
 
     .student-photo {
