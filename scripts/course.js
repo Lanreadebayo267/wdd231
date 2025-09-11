@@ -1,8 +1,8 @@
-// Example course data
+// Example course data (add or remove courses and set completed true/false)
 const courses = [
-  { code: "WDD130", name: "Web Fundamentals", credits: 3, category: "wdd" },
-  { code: "CSE111", name: "Programming with Functions", credits: 3, category: "cse" },
-  { code: "WDD231", name: "Web Frontend Development I", credits: 3, category: "wdd" }
+  { code: "WDD130", name: "Web Fundamentals", credits: 3, category: "wdd", completed: true },
+  { code: "CSE111", name: "Programming with Functions", credits: 3, category: "cse", completed: true },
+  { code: "WDD231", name: "Web Frontend Development I", credits: 3, category: "wdd", completed: false }
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -11,17 +11,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function displayCourses(filter) {
     coursesDiv.innerHTML = "";
-    let total = 0;
 
-    courses.forEach(course => {
-      if (filter === "all" || course.category === filter) {
-        const div = document.createElement("div");
-        div.textContent = `${course.code}: ${course.name} (${course.credits} credits)`;
-        coursesDiv.appendChild(div);
-        total += course.credits;
+    // filter the courses to be displayed
+    const filtered = courses.filter(course => filter === "all" || course.category === filter);
+
+    // create course elements
+    filtered.forEach(course => {
+      const div = document.createElement("div");
+      div.textContent = `${course.code}: ${course.name} (${course.credits} credits)`;
+      if (course.completed) {
+        div.classList.add("completed");
+        const badge = document.createElement("span");
+        badge.textContent = " ✓ completed";
+        badge.setAttribute("aria-hidden", "true");
+        badge.style.marginLeft = "0.5rem";
+        div.appendChild(badge);
       }
+      coursesDiv.appendChild(div);
     });
 
+    // total calculated with reduce (required by rubric)
+    const total = filtered.reduce((acc, c) => acc + (c.credits || 0), 0);
     totalCredits.textContent = total;
   }
 

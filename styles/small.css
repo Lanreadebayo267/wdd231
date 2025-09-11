@@ -2,7 +2,27 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    line-height:1.6
+    line-height:1.6;
+}
+
+/* Skip link */
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+    width: auto;
+    height: auto;
+    padding: .5rem;
+    background: #004d40;
+    color: white;
+    z-index: 999;
 }
 
 header {
@@ -12,6 +32,10 @@ header {
     padding: 1rem;
     background: #004d40;
     color: white;
+}
+.header-left {
+    display:flex;
+    align-items:center;
 }
 
 header .logo {
@@ -42,6 +66,13 @@ nav ul li a {
     color: white;
 }
 
+/* focus visible for keyboard users */
+a:focus, button:focus {
+    outline: 3px solid #ffd54f;
+    outline-offset: 2px;
+}
+
+/* menu button */
 #menu {
     background: none;
     border: none;
@@ -73,6 +104,19 @@ main {
     margin-bottom: 1rem;
 }
 
+/* courses list styles */
+#courses > div {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+/* completed course */
+#courses > div.completed {
+    opacity: 0.9;
+    text-decoration: line-through;
+    color: #666;
+}
+
 /* Footer */
 footer {
     text-align: center;
@@ -98,4 +142,9 @@ footer {
 
 .icon:hover {
     transform: scale(1.1);
+}
+
+/* small nav visible state when toggled (JS toggles .open) */
+nav.open {
+    display: block;
 }

@@ -19,20 +19,27 @@
   <script src="scripts/course.js" defer></script>
 </head>
 <body>
+    <!-- Skip link for accessibility -->
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <header>
-        <img src="images/logo.svg" alt="Site Logo" class="logo">
-        <span class="site-name">Olanrewaju Adebayo</span>
-        <button id="menu" aria-label="Menu">&#9776;</button>
-        <nav>
+        <div class="header-left">
+            <img src="images/logo.svg" alt="Site Logo" class="logo">
+            <span class="site-name">Olanrewaju Adebayo</span>
+        </div>
+
+        <button id="menu" aria-label="Menu" aria-expanded="false">&#9776;</button>
+
+        <nav id="site-nav" aria-label="Primary navigation">
             <ul class="navigation">
-                <li><a href=index.html class="active">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="#">Chamber</a></li>
                 <li><a href="#">Final</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="main">
         <h1>WDD 231 Course Home Page</h1>
 
         <!-- About Me Section -->
@@ -57,14 +64,17 @@
                 <button id="wdd">WDD Courses</button>
                 <button id="cse">CSE Courses</button>
             </div>
-            <div id="courses"></div>
-            <p>Total Credits: <span id="totalCredits">6</span></p>
+            <div id="courses" aria-live="polite"></div>
+            <p>Total Credits: <span id="totalCredits">0</span></p>
         </section>
 
         <!-- Contact Section -->
         <section id="contact">
             <h2>Contact Me</h2>
-            <p>You can reach me via GitHub, LinkedIn, or by email at <a href="mailto:laanreadebayo@gmail.com">laanreadebayo@gmail.com</a></p>
+            <p>
+                You can reach me via GitHub, LinkedIn, or by email at
+                <a href="mailto:laanreadebayo@gmail.com">Email Me</a>
+            </p>
         </section>
     </main>
 
