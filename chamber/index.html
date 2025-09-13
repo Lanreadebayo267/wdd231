@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Olanrewaju Adebayo's WDD231 Course Home Page showcasing web development projects, course progress, and learning portfolio.">
+  <meta name="author" content="Olanrewaju Adebayo">
+  <meta property="og:title" content="WDD231 Course Home Page | Olanrewaju Adebayo">
+  <meta property="og:description" content="Olanrewaju Adebayo's WDD231 Course Home Page showcasing web development projects, course progress, and learning porfolio.">
+  <meta property="og:image" content="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Ffacebook-logo&psig=AOvVaw3xSE1g2x7c3o107TOUGvbp&ust=1757712406753000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPD44Y7T0Y8DFQAAAAAdAAAAABAE">
+  <meta property="og:url" content="https://www.facebook.com">
+  <title>WDD231 Course Home Page | Olanrewaju Adebayo</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico">
+  <!-- JavaScript Files -->
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/course.js" defer></script>
+</head>
+<body>
+    <!-- Skip link for accessibility -->
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header>
+        <div class="header-left">
+            <img src="images/logo.svg" alt="Site Logo" class="logo">
+            <span class="site-name">Olanrewaju Adebayo</span>
+        </div>
+
+        <button id="menu" aria-label="Menu" aria-expanded="false">&#9776;</button>
+
+        <nav id="site-nav" aria-label="Primary navigation">
+            <ul class="navigation">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="#">Final</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <h1>WDD 231 Course Home Page</h1>
+
+        <!-- About Me Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-container">
+                <img src="images/student.jpg" alt="Olanrewaju Adebayo" class="student-photo">
+                <p>
+                    Hello! My name is <strong>Olanrewaju Adebayo</strong>.
+                    I'm a web development student passionate about building modern, responsive websites 
+                    and learning new technologies. This course home page showcases my progress 
+                    and links to my upcoming Chamber of Commerce and Final projects.
+                </p>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section>
+            <h2>My Courses</h2>
+            <div id="coursebuttons">
+                <button id="all">All Courses</button>
+                <button id="wdd">WDD Courses</button>
+                <button id="cse">CSE Courses</button>
+            </div>
+            <div id="courses" aria-live="polite"></div>
+            <p>Total Credits: <span id="totalCredits">0</span></p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>
+                You can reach me via GitHub, LinkedIn, or by email at
+                <a href="mailto:laanreadebayo@gmail.com">Email Me</a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Social Icons -->
+        <div class="social">
+            <a href="https://github.com/Lanreadebayo267" target="_blank" aria-label="GitHub">
+                <img src="images/github.png" alt="GitHub icon" class="icon">
+            </a>
+            <a href="https://www.linkedin.com/in/lanre-adebayo-03a522299" target="_blank" aria-label="LinkedIn">
+                <img src="images/linkedin.jpg" alt="LinkedIn Icon" class="icon">
+            </a>
+        </div>
+        <p>&copy; <span id="currentyear"></span> | Olanrewaju Adebayo | Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

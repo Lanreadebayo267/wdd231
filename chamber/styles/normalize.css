@@ -1,0 +1,7 @@
+/* Minimal normalize: keeps default fonts but removes margin/padding and sets box-sizing */
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+body, h1, h2, h3, p, ul, ol, figure, blockquote { margin: 0; padding: 0; }
+ul { list-style: none; }
+img { max-width: 100%; display: block; }
+button { font: inherit; }

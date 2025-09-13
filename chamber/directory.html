@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+</ul>
+</nav>
+</div>
+</header>
+
+
+<main class="container">
+<section class="controls">
+<h1>Lagos Chamber Directory</h1>
+<p class="lead">Explore member businesses in Lagos, Nigeria. Toggle between a grid of member cards or a compact list view.</p>
+
+
+<div class="view-controls" role="toolbar" aria-label="View controls">
+<button id="gridView" aria-pressed="true">Grid View</button>
+<button id="listView" aria-pressed="false">List View</button>
+
+
+<label for="membershipFilter">Membership:</label>
+<select id="membershipFilter">
+<option value="all">All</option>
+<option value="1">Member</option>
+<option value="2">Silver</option>
+<option value="3">Gold</option>
+</select>
+</div>
+</section>
+
+
+<!-- Optional spotlights area for Silver/Gold members -->
+<section id="spotlights" class="spotlights container" aria-live="polite">
+<!-- spotlight cards inserted here by scripts/directory.js -->
+</section>
+
+
+<section id="members" class="members grid" aria-live="polite">
+<!-- Members loaded from data/members.json by scripts/directory.js -->
+</section>
+</main>
+
+
+<footer class="site-footer">
+<div class="container footer-inner">
+<div>
+<p>Lagos Chamber of Commerce</p>
+<p>Contact: lagoschamberofcommerce@gmail.com | +234 800 223 6535</p>
+</div>
+<div>
+<p>&copy; <span id="year"></span> Lagos Chamber - <span id="author">Olanrewaju Adebayo</span> - WDD231</p>
+<p>Last modified: <span id="lastModified"></span></p>
+</div>
+</div>
+</footer>
+</body>
+</html>

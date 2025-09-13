@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Eko Hospitality Group",
+    "address": "1415 Adetokunbo Ademola St, Victoria Island, Lagos",
+    "phone": "+234-1-280-0100",
+    "website": "https://ekohospitality.com",
+    "image": "eko-hospitality.webp",
+    "membership": 3,
+    "category": "Hospitality",
+    "description": "Premier hotels and conference services in the heart of Lagos."
+  },
+  {
+    "name": "TechBridge Solutions",
+    "address": "23 Adeola Odeku St, Victoria Island, Lagos",
+    "phone": "+234-803-456-7890",
+    "website": "https://techbridge.ng",
+    "image": "techbridge.webp",
+    "membership": 2,
+    "category": "IT Services",
+    "description": "Innovative technology consulting and software development."
+  },
+  {
+    "name": "Naija Bites Restaurant",
+    "address": "10 Allen Ave, Ikeja, Lagos",
+    "phone": "+234-1-493-2211",
+    "website": "https://naijabites.ng",
+    "image": "naija-bites.webp",
+    "membership": 1,
+    "category": "Restaurant",
+    "description": "Authentic Nigerian cuisine with a modern twist."
+  },
+  {
+    "name": "GreenMart Superstores",
+    "address": "45 Herbert Macaulay Way, Yaba, Lagos",
+    "phone": "+234-1-470-3322",
+    "website": "https://greenmart.com.ng",
+    "image": "greenmart.webp",
+    "membership": 2,
+    "category": "Retail",
+    "description": "Affordable groceries and household essentials for families."
+  },
+  {
+    "name": "Lagos Fashion Collective",
+    "address": "18 Admiralty Way, Lekki Phase 1, Lagos",
+    "phone": "+234-708-334-5566",
+    "website": "https://lagosfashioncollective.com",
+    "image": "lagos-fashion.webp",
+    "membership": 3,
+    "category": "Fashion",
+    "description": "Designers and tailors showcasing Nigeria’s vibrant fashion culture."
+  },
+  {
+    "name": "West Africa Logistics Ltd",
+    "address": "Plot 5A Apapa Wharf Rd, Apapa, Lagos",
+    "phone": "+234-802-998-1122",
+    "website": "https://walogistics.com",
+    "image": "walogistics.webp",
+    "membership": 1,
+    "category": "Logistics",
+    "description": "Efficient cargo handling, warehousing, and distribution services."
+  },
+  {
+    "name": "Zenith Medical Center",
+    "address": "55 Bode Thomas St, Surulere, Lagos",
+    "phone": "+234-1-890-4455",
+    "website": "https://zenithmedical.com.ng",
+    "image": "zenith-medical.webp",
+    "membership": 2,
+    "category": "Healthcare",
+    "description": "Quality healthcare and diagnostic services for Lagos residents."
+  }
+]
