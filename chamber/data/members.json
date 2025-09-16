@@ -1,72 +1,63 @@
 [
   {
-    "name": "Eko Hospitality Group",
-    "address": "1415 Adetokunbo Ademola St, Victoria Island, Lagos",
-    "phone": "+234-1-280-0100",
-    "website": "https://ekohospitality.com",
-    "image": "eko-hospitality.webp",
-    "membership": 3,
-    "category": "Hospitality",
-    "description": "Premier hotels and conference services in the heart of Lagos."
-  },
-  {
-    "name": "TechBridge Solutions",
-    "address": "23 Adeola Odeku St, Victoria Island, Lagos",
-    "phone": "+234-803-456-7890",
-    "website": "https://techbridge.ng",
-    "image": "techbridge.webp",
-    "membership": 2,
-    "category": "IT Services",
-    "description": "Innovative technology consulting and software development."
-  },
-  {
-    "name": "Naija Bites Restaurant",
-    "address": "10 Allen Ave, Ikeja, Lagos",
-    "phone": "+234-1-493-2211",
-    "website": "https://naijabites.ng",
-    "image": "naija-bites.webp",
-    "membership": 1,
-    "category": "Restaurant",
-    "description": "Authentic Nigerian cuisine with a modern twist."
-  },
-  {
-    "name": "GreenMart Superstores",
-    "address": "45 Herbert Macaulay Way, Yaba, Lagos",
-    "phone": "+234-1-470-3322",
-    "website": "https://greenmart.com.ng",
-    "image": "greenmart.webp",
-    "membership": 2,
-    "category": "Retail",
-    "description": "Affordable groceries and household essentials for families."
-  },
-  {
-    "name": "Lagos Fashion Collective",
-    "address": "18 Admiralty Way, Lekki Phase 1, Lagos",
-    "phone": "+234-708-334-5566",
-    "website": "https://lagosfashioncollective.com",
-    "image": "lagos-fashion.webp",
-    "membership": 3,
-    "category": "Fashion",
-    "description": "Designers and tailors showcasing Nigeria’s vibrant fashion culture."
-  },
-  {
-    "name": "West Africa Logistics Ltd",
-    "address": "Plot 5A Apapa Wharf Rd, Apapa, Lagos",
-    "phone": "+234-802-998-1122",
-    "website": "https://walogistics.com",
-    "image": "walogistics.webp",
-    "membership": 1,
-    "category": "Logistics",
-    "description": "Efficient cargo handling, warehousing, and distribution services."
-  },
-  {
-    "name": "Zenith Medical Center",
-    "address": "55 Bode Thomas St, Surulere, Lagos",
-    "phone": "+234-1-890-4455",
-    "website": "https://zenithmedical.com.ng",
-    "image": "zenith-medical.webp",
-    "membership": 2,
-    "category": "Healthcare",
-    "description": "Quality healthcare and diagnostic services for Lagos residents."
-  }
+"phone": "+234 1 277 2700",
+"website": "https://www.ekohotels.com",
+"image": "https://d1jcea4y7xhp7l.cloudfront.net/2017/04/eko.jpg",
+"membership": 3,
+"info": "Luxury hotel and event center."
+},
+{
+"name": "Dangote Group",
+"address": "Union Marble House, 1 Alfred Rewane Rd, Ikoyi, Lagos",
+"phone": "+234 1 448 0815",
+"website": "https://www.dangote.com",
+"image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1SydbICiWgvq5-f6wjl_70co6dPmjSQmuJg&s",
+"membership": 3,
+"info": "Diversified multinational company."
+},
+{
+"name": "GTBank Plc",
+"address": "Plot 635, Akin Adesola St, Victoria Island, Lagos",
+"phone": "+234 1 448 0000",
+"website": "https://www.gtbank.com",
+"image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNp6BFJU3baEj5kLNi0Kk3JyGPM4S7d_0HfQ&s",
+"membership": 2,
+"info": "Leading financial institution."
+},
+{
+"name": "Innoson Motors",
+"address": "Plot 1, Block A, Ikorodu Industrial Estate, Lagos",
+"phone": "+234 803 506 7676",
+"website": "https://www.innosongroup.com",
+"image": "data:image/jpeg;base64,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",
+"membership": 2,
+"info": "Nigeria's first indigenous motor vehicle manufacturer."
+},
+{
+"name": "Flutterwave",
+"address": "8 Providence St, Lekki Phase 1, Lagos",
+"phone": "+234 1 888 9508",
+"website": "https://www.flutterwave.com",
+"image": "data:image/png;base64,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",
+"membership": 3,
+"info": "Fintech company powering payments across Africa."
+},
+{
+"name": "Konga",
+"address": "Lekki Phase 1, Lagos",
+"phone": "+234 1 460 5555",
+"website": "https://www.konga.com",
+"image": "data:image/png;base64,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",
+"membership": 1,
+"info": "E-commerce platform."
+},
+{
+"name": "Filmhouse Cinemas",
+"address": "The Rock Drive, Lekki Phase 1, Lagos",
+"phone": "+234 1 295 0810",
+"website": "https://www.filmhouseng.com",
+"image": "https://images.seeklogo.com/logo-png/45/1/filmhouse-cinemas-logo-png_seeklogo-458961.png",
+"membership": 1,
+"info": "Cinema entertainment company."
+}
 ]

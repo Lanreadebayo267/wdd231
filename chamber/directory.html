@@ -1,65 +1,66 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-us">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Lagos Chamber of Commerce Directory</title>
-  
-  <!-- SEO Meta -->
-  <meta name="description" content="Discover Lagos businesses in our Chamber of Commerce directory. Find contact details, membership levels, and opportunities to connect with local organizations.">
+  <meta name="description" content="Lagos Chamber of Commerce Directory - Connecting local businesses, networking opportunities, and community growth.">
   <meta name="author" content="Olanrewaju Adebayo">
-  
+  <title>Lagos Chamer of Commerce - Directory</title>
+
   <!-- Favicon -->
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/x-icon" href="images/favicon (1).ico">
 
-  <!-- Open Graph (OG) Meta -->
+  <!-- Open Graph / Facebook -->
   <meta property="og:title" content="Lagos Chamber of Commerce Directory">
-  <meta property="og:description" content="Explore the Lagos Chamber of Commerce directory and connect with local businesses, events, and resources.">
-  <meta property="og:image" content="images/chamber-og.jpg">
-  <meta property="og:url" content="https://lanreadebayo267.github.io/wdd231/chamber/">
-  <meta property="og:type" content="website">
+  <meta property="og:description" content="Connecting business in Lagos, Nigeria. Discover, join, and grow with us.">
+  <meta property="og:image" content="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Ffacebook-logo&psig=AOvVaw3xSE1g2x7c3o107TOUGvbp&ust=1757712406753000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPD44Y7T0Y8DFQAAAAAdAAAAABAE">
+  <meta property="og:url" content="https://www.facebook.com">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- External CSS -->
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/base.css">
-  <link rel="stylesheet" href="styles/larger.css">
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-  <header>
-    <h1>Lagos Chamber Directory</h1>
-    <nav>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="directory.html">Directory</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/lagos-chamber-commerce.png" alt="Lagos Chamber Logo" class="logo">
+        <span class="brand-text">Lagos Chamber</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">☰</button>
+        <ul id="nav-links" class="nav-links hidden">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discovery.html">Discover</a></li>
+          <li><a href="directory.html" class="active">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav> 
+    </div>
   </header>
 
-  <main>
-    <section id="directory">
-      <h2>Member Directory</h2>
-      <!-- Member list will be injected with JS -->
-      <div id="members-container"></div>
+  <main class="container">
+    <h1 class="page-title">Buisiness Directory</h1>
+
+    <section class="controls" aria-label="View controls">
+      <div class="view-buttons" role="group" aria-label="Display Options">
+        <button id="grid-view" class="control-btn" aria-pressed="true">Grid View</button>
+        <button id="list-view" class="control-btn" aria-pressed="false">List View</button>
+      </div>
+    </section>
+
+    <section id="member-container" class="members grid" aria-live="polite">
+      <!-- Member cards injected via JS -->
     </section>
   </main>
 
-  <footer>
-    <p>&copy; <span id="year"></span> Lagos Chamber of Commerce | All Rights Reserved</p>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>📍 Lagos Chamber of Commerce | lcci@lagoschamber.org | +234 803 772 6593</p>
+      <p>&copy; <span id="year"></span> Lagos Chamber | WDD 231 | <span id="lastModified"></span></p>
+    </div>
   </footer>
 
-  <!-- External JS -->
-  <script src="scripts/directory.js" defer></script>
-  <script>
-    // dynamic year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script type="module" src="scripts/directory.js"></script>
 </body>
 </html>

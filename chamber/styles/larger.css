@@ -1,8 +1,0 @@
-@media (min-width: 32rem){
-    .lead{ font-size:1.05rem; }
-    .logo{ font-size:1.5rem; }
-}
-
-@media (min-width: 48rem){
-    .container{ width:85%; }
-}
