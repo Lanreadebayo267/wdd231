@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Enrollment</title>
+  <link rel="stylesheet" href="modules.css">
+</head>
+<body>
+  <h1 id="courseName"></h1>
+
+  <label for="sectionNumber">Choose section:</label>
+  <select id="sectionNumber"></select>
+  <button id="enrollStudent">Enroll Student</button>
+  <button id="dropStudent">Drop Student</button>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Section</th>
+        <th>Room</th>
+        <th>Enrolled</th>
+        <th>Days</th>
+        <th>Instructor</th>
+      </tr>
+    </thead>
+    <tbody id="sections"></tbody>
+  </table>
+
+  <script type="module" src="scripts/modules.js"></script>
+</body>
+</html>
