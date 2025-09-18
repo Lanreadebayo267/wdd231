@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to the Lagos Chamber of Commerce. Connecting businesses, promoting growth, and supporting our community.">
+    <meta name="author" content="Olanrewaju Adebayo">
+    <title>Lagos Chamber of Commerce | Home</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon(1).ico">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Lagos Chamber of Commerce">
+    <meta property="og:description" content="Supporting businesses in Lagos, Nigeria. Discover, join, and grow with us.">
+    <meta property="og:image" content="images/chamber-og.jpg">
+    <meta property="og:url" content="https://www.facebook.com">
+
+    <!-- CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="brand">
+                <img src="images/lagos-chamber-commerce.png" alt="Lagos Chamber Logo" class="logo">
+                <span class="brand-text">Lagos Chamber</span>
+            </a>
+            <nav class="site-nav" aria-label="Primary">
+                <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">☰</button>
+                <ul id="nav-links" class="nav-links hidden">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="discovery.html">Discovery</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="images/lagos-skyline.jpeg" alt="Lagos Skyline" class="hero-image">
+            <div class="hero-overlay">
+                <h1>Connecting Local Businesses</h1>
+                <a href="join.html" class="cta-btn">Join the Chamber</a>
+            </div>
+        </section>
+
+        <!-- Current Events -->
+        <section class="events">
+            <h2>Upcoming Events</h2>
+            <article>
+                <h3>Business Networking Night</h3>
+                <p>📅 October 25, 2025 - Lagos Island Conference Center</p>
+                <p>Join fellow entrepreneurs, make connections, and explore opportunities.</p>
+            </article>
+        </section>
+
+        <!-- Weather -->
+        <section class="weather">
+            <h2>Local Weather</h2>
+            <div id="weather-container">
+                <!-- Weather data injected by JS -->
+                 <p>Loading weather...</p>
+            </div>
+        </section>
+
+        <!--- Company Spotlights -->
+        <section class="spotlights">
+            <h2>Member Spotlights</h2>
+            <div id="spotlight-container" class="members grid">
+                <!-- Spotlight members injected by JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>📍 Lagos Chamber of Commerce | lcci@lagoschamber.org | +234 803 772 6593</p>
+            <p>&copy; <span id="year"></span> Lagos Chamber | WDD 231 | <span id="lastModified"></span></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="scripts/home.js"></script>
+</body>
+</html>
