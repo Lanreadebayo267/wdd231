@@ -23,6 +23,10 @@
   <script src="scripts/date.js" defer></script>
   <script src="scripts/navigation.js" defer></script>
   <script src="scripts/course.js" defer></script>
+  <script>
+    // dynamic year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </head>
 <body>
     <!-- Skip link for accessibility -->
@@ -82,6 +86,9 @@
                 <a href="mailto:laanreadebayo@gmail.com">Email Me</a>
             </p>
         </section>
+
+        <!-- Modal Dialog -->
+        <dialog id="course-details"></dialog>
     </main>
 
     <footer>
