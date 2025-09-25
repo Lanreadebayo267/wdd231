@@ -1,39 +1,36 @@
 // directory.js - module
 
-// Utility: map membership number to label
+// Map membership number to label
 function membershipLabel(level) {
   switch (level) {
-    case 3:
-      return 'Gold';
-    case 2:
-      return 'Silver';
-    default:
-      return 'Member';
+    case 3: return "Gold";
+    case 2: return "Silver";
+    default: return "Member";
   }
 }
 
-// Async fetch members.json and render
+// Fetch members.json and render
 async function getMembers() {
   try {
-    const resp = await fetch('data/members.json');
-    if (!resp.ok) throw new Error(`Network response was not ok: ${resp.status}`);
+    const resp = await fetch("data/members.json");
+    if (!resp.ok) throw new Error(`HTTP error: ${resp.status}`);
     const members = await resp.json();
     displayMembers(members);
   } catch (err) {
-    console.error('Failed to load members:', err);
-    const container = document.getElementById('members-container');
+    console.error("Failed to load members:", err);
+    const container = document.getElementById("members-container");
     if (container) container.innerHTML = `<p class="error">Unable to load directory at this time.</p>`;
   }
 }
 
 function displayMembers(members) {
-  const container = document.getElementById('members-container');
+  const container = document.getElementById("members-container");
   if (!container) return;
-  container.innerHTML = '';
+  container.innerHTML = "";
 
   members.forEach(member => {
-    const card = document.createElement('article');
-    card.className = 'card';
+    const card = document.createElement("article");
+    card.className = "card";
 
     card.innerHTML = `
       <div class="logo-wrap">
@@ -53,69 +50,54 @@ function displayMembers(members) {
   });
 }
 
-// Toggle grid/list view
+// Grid/List toggle
 function setGridView() {
-  const container = document.getElementById('members-container');
-  if (!container) return;
-  container.classList.add('grid');
-  container.classList.remove('list');
-  const gridBtn = document.getElementById('grid-view');
-  const listBtn = document.getElementById('list-view');
-  if (gridBtn) gridBtn.setAttribute('aria-pressed', 'true');
-  if (listBtn) listBtn.setAttribute('aria-pressed', 'false');
+  const container = document.getElementById("members-container");
+  container.classList.add("grid");
+  container.classList.remove("list");
+
+  document.getElementById("grid-view").setAttribute("aria-pressed", "true");
+  document.getElementById("list-view").setAttribute("aria-pressed", "false");
 }
 
 function setListView() {
-  const container = document.getElementById('members-container');
-  if (!container) return;
-  container.classList.add('list');
-  container.classList.remove('grid');
-  const gridBtn = document.getElementById('grid-view');
-  const listBtn = document.getElementById('list-view');
-  if (gridBtn) gridBtn.setAttribute('aria-pressed', 'false');
-  if (listBtn) listBtn.setAttribute('aria-pressed', 'true');
+  const container = document.getElementById("members-container");
+  container.classList.add("list");
+  container.classList.remove("grid");
+
+  document.getElementById("grid-view").setAttribute("aria-pressed", "false");
+  document.getElementById("list-view").setAttribute("aria-pressed", "true");
 }
+
 
 // Mobile nav toggle
 function initMobileNav() {
-  const menuToggle = document.getElementById('menu-toggle');
-  const navLinks = document.getElementById('nav-links');
-  if (!menuToggle || !navLinks) return;
-  menuToggle.addEventListener('click', () => {
-    const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
-    menuToggle.setAttribute('aria-expanded', String(!expanded));
-    navLinks.classList.toggle('hidden');
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+  menuToggle.addEventListener("click", () => {
+    const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+    menuToggle.setAttribute("aria-expanded", String(!expanded));
+    navLinks.classList.toggle("hidden");
   });
 }
 
-// Footer year + last modified
+// Footer info
 function initFooter() {
-  const yearEl = document.getElementById('year');
-  const lastModifiedEl = document.getElementById('lastModified');
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
-  if (lastModifiedEl) {
-    const lm = document.lastModified ? new Date(document.lastModified) : new Date();
-    lastModifiedEl.textContent = lm.toLocaleString();
-  }
+  document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("lastModified").textContent = document.lastModified;
 }
 
-// Wire up UI
+// Init
 function initUI() {
-  const gridBtn = document.getElementById('grid-view');
-  const listBtn = document.getElementById('list-view');
-  if (gridBtn) gridBtn.addEventListener('click', setGridView);
-  if (listBtn) listBtn.addEventListener('click', setListView);
-
-  // default to grid
-  setGridView();
-
+  document.getElementById("grid-view").addEventListener("click", setGridView);
+  document.getElementById("list-view").addEventListener("click", setListView);
+  setGridView(); // default
   initMobileNav();
   initFooter();
 }
 
-// Start
-window.addEventListener('DOMContentLoaded', async () => {
+window.addEventListener("DOMContentLoaded", async () => {
   initUI();
   await getMembers();
 });
-// End of directory.js
+
