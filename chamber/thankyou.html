@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lagos Chamber of Commerce | Thank You</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 2rem; line-height: 1.6; text-align: center; background:#f9f9f9; }
+        .details { max-width: 500px; margin: 2rem auto; padding: 1rem; border: 2px solid #0066cc; border-radius: 10px; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.2); animation: fadeIn 1s ease forwards; opacity:0; }
+        @keyframes fadeIn { to { opacity:1; } }
+    </style>
+</head>
+<body>
+    <h1>Thank You for Joining!</h1>
+    <p>Your application has been received by the Lagos Chamber of Commerce.</p>
+
+    <div class="details">
+        <h2>Submitted Information</h2>
+        <ul id="info"></ul>
+    </div>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const fields = ['first','last','email','phone','business','timestamp'];
+      const ul = document.getElementById('info');
+      fields.forEach(f => {
+        if(params.get(f)) {
+          const li = document.createElement('li');
+          li.textContent = `${f.charAt(0).toUpperCase() + f.slice(1)}: ${params.get(f)}`;
+          ul.appendChild(li);
+        }
+      });
+    </script>
+</body>
+</html>

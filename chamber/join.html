@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join the Lagos Chamber of Commerce. Become a member to connect with businesses, grow your network, and access exclusive opportunities.">
+    <meta name="author" content="Olanrewaju Adebayo">
+    <title>Lagos Chamber of Commerce | Join</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background:#f9f9f9; }
+      header, main, footer { padding: 1rem; }
+      form { max-width: 600px; margin: auto; background:#fff; padding:1.5rem; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+      label { display: block; margin: 0.5rem 0 0.2rem; }
+      input, select, textarea { width: 100%; padding: 0.5rem; margin-bottom: 1rem; border:1px solid #ccc; border-radius:5px; }
+      input[type="submit"], button { background:#0066cc; color:#fff; border:none; padding:0.7rem 1.2rem; border-radius:5px; cursor:pointer; transition: background 0.3s ease, transform 0.2s ease; }
+      input[type="submit"]:hover, button:hover { background:#004999; transform:scale(1.05); }
+      .cards { display: grid; gap: 1rem; margin-top: 2rem; }
+      @media(min-width: 768px) {
+        .layout { display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; align-items:start; }
+      }
+      .card { border: 2px solid #0066cc; border-radius: 12px; padding: 1rem; text-align: center; cursor: pointer; background:#fff; transform:scale(0.8); opacity:0; animation: popIn 0.8s forwards; }
+      .card:nth-child(1){animation-delay:0.2s;}
+      .card:nth-child(2){animation-delay:0.4s;}
+      .card:nth-child(3){animation-delay:0.6s;}
+      .card:nth-child(4){animation-delay:0.8s;}
+      .card:hover { transform:scale(1.08) rotate(1deg); box-shadow:0 4px 15px rgba(0,0,0,0.3); transition:transform 0.3s ease; }
+      @keyframes popIn { to { transform:scale(1); opacity:1; } }
+      dialog { border: none; border-radius: 12px; padding: 1.5rem; box-shadow:0 2px 10px rgba(0,0,0,0.3); }
+      footer { text-align: center; margin-top: 2rem; font-size: 0.9rem; color:#555; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lagos Chamber of Commerce</h1>
+        <h2>Join Our Membership</h2>
+    </header>
+
+    <main class="layout">
+        <section>
+            <form method="get" action="thankyou.html">
+                <label for="fname">First Name*</label>
+                <input type="text" id="fname" name="first" required autocomplete="given-name">
+                
+                <label for="lname">Last Name*</label>
+                <input type="text" id="lname" name="last" required autocomplete="family-name">
+
+                <label for="title">Organizational Title*</label>
+                <input type="text" id="title" name="title" required pattern="^[A-Za-z\- ]{7,}$" placeholder="e.g. Managing Director">
+
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" required placeholder="name@example.com" autocomplete="email">
+
+                <label for="phone">Phone*</label>
+                <input type="tel" id="phone" name="phone" required autocomplete="tel">
+
+                <label for="business">Business/Organization Name*</label>
+                <input type="text" id="business" name="business" required>
+
+                <label for="desc">Business Description</label>
+                <textarea id="desc" name="description" rows="4"></textarea>
+
+                <label for="membership">Membership Level*</label>
+                <select id="membership" name="membership" required>
+                    <option value="np">NP (Non-Profit)</option>
+                    <option value="bronze">Bronze</option>
+                    <option value="silver">Silver</option>
+                    <option value="gold">Gold</option>
+                </select>
+
+                <input type="hidden" id="timestamp" name="timestamp">
+
+                <input type="submit" value="Join Now">
+            </form>
+        </section>
+
+        <aside class="cards">
+            <div class="card" data-dialog="np-dialog">NP Membership</div>
+            <div class="card" data-dialog="bronze-dialog">Bronze Mmbership</div>
+            <div class="card" data-dialog="silver-dialog">Silver Membership</div>
+            <div class="card" data-dialog="gold-dialog">Gold Membership</div>
+        </aside>
+    </main>
+
+    <!-- Dialogs for membership benefits -->
+     <dialog id="np-dialog">
+        <h3>Non-Profit Membership</h3>
+        <p>Special rates and support for non-profit organizations in Lagos.</p>
+        <button onclick="this.closest('dialog').close()">Close</button>
+     </dialog>
+     <dialog id="bronze-dialog">
+        <h3>Bronze Membership</h3>
+        <p>Basic benefits including business listing and networking opportunities.</p>
+        <button onclick="this.closest('dialog').close()">Close</button>
+     </dialog>
+     <dialog id="silver-dialog">
+        <h3>Silver Membership</h3>
+        <p>Extended visibility, events invitations, and mentorship programs.</p>
+        <button onclick="this.closest('dialog').close()">Close</button>
+     </dialog>
+     <dialog id="gold-dialog">
+        <h3>Gold Membership</h3>
+        <p>Premium benefits including top placement in directory, sponsorship options, and exclusive events.</p>
+        <button onclick="this.closest('dialog').close()">Close</button>
+     </dialog>
+
+     <footer>
+        <p>&copy; 2025 Lagos Chamber of Commerce</p>
+     </footer>
+
+     <script>
+        // Hidden timestamp
+        document.getElementById('timestamp').value = new Date().toLocaleString();
+
+        // Card click opens dialog
+        document.querySelectorAll('.card').forEach(card => {
+          card.addEventListener('click', () => {
+            document.getElementById(card.dataset.dialog).showModal();
+        });
+      });
+
+      // Escape closes dialog
+    document.querySelectorAll('dialog').forEach(dlg => {
+      dlg.addEventListener('keydown', e => {
+        if(e.key === 'Escape') dlg.close();
+      });
+    });
+    </script>
+</body>
+</html>
