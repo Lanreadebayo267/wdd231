@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Lagos - Lagos Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script defer src="scripts/discover.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="brand">
+                <img src="images/lagos-chamber-commerce.png" alt="Lagos Chamber Logo" class="logo">
+                <span class="brand-text">Lagos Chamber</span>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <nav class="site-nav hidden">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discovery.html" class="active">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Intro -->
+    <main class="container">
+        <h1 class="page-title">Discover Lagos</h1>
+        <p class="intro">
+            Explore the vibrant city of Lagos, Nigeria — from its bustling markets to cultural centers and seaside views.
+            Here are some key landmarks and attractions that showcase the best of our community.
+        </p>
+
+        <!-- Last Visit Message -->
+        <section id="visit-message" class="visit-message"></section>
+
+        <!-- Discover Grid -->
+        <section class="discover-grid" id="discover-grid">
+            <!-- JS will populate 8 cards here from JSON -->
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Lagos Chamber of Commerce | Built for WDD231</p>
+    </footer>
+</body>
+</html>

@@ -213,3 +213,86 @@ footer {
   width: 80px;
   height: auto;
 }
+
+/* ===== Discover Page ===== */
+.visit-message {
+  background: #e0f7fa;
+  padding: 1rem;
+  border-left: 5px solid #00796b;
+  margin: 1rem 0;
+  font-weight: 500;
+}
+
+.discover-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.discover-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.discover-card figure {
+  margin: 0;
+}
+
+.discover-card img {
+  border-radius: 6px;
+  transition: transform 0.3s;
+}
+
+/* Hover only for medium+ screens */
+@media (min-width: 641px) {
+  .discover-card img:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* Small screens */
+@media (max-width: 640px) {
+  .discover-grid {
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d"
+      "e"
+      "f"
+      "g"
+      "h";
+  }
+  .discover-card:nth-child(1) { grid-area: a; }
+  .discover-card:nth-child(2) { grid-area: b; }
+  .discover-card:nth-child(3) { grid-area: c; }
+  .discover-card:nth-child(4) { grid-area: d; }
+  .discover-card:nth-child(5) { grid-area: e; }
+  .discover-card:nth-child(6) { grid-area: f; }
+  .discover-card:nth-child(7) { grid-area: g; }
+  .discover-card:nth-child(8) { grid-area: h; }
+}
+
+/* Medium screens */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .discover-grid {
+    grid-template-areas:
+      "a b"
+      "c d"
+      "e f"
+      "g h";
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1025px) {
+  .discover-grid {
+    grid-template-areas:
+      "a b c d"
+      "e f g h";
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

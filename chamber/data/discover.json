@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Nike Art Gallery",
+    "image": "images/nike-art.webp",
+    "address": "Lekki Phase I, Lagos",
+    "description": "One of the largest art galleries in West Africa featuring Nigerian and African contemporary art."
+  },
+  {
+    "name": "Lekki Conservation Centre",
+    "image": "images/lcc.webp",
+    "address": "Lekki-Epe Expressway, Lagos",
+    "description": "Nature reserve with a canopy walkway, picnic areas, and diverse wildlife."
+  },
+  {
+    "name": "National Museum Lagos",
+    "image": "images/national-museum.webp",
+    "address": "Onikan, Lagos Island",
+    "description": "Houses Nigeria's cultural artifacts, including art, sculptures, and historical relics."
+  },
+  {
+    "name": "Freedom Park",
+    "image": "images/freedom-park.webp",
+    "address": "Old Prison Ground, Lagos Island",
+    "description": "A memorial park and cultural center hosting concerts, exhibitions, and festivals."
+  },
+  {
+    "name": "Elegushi Beach",
+    "image": "images/elegushi-beach.webp",
+    "address": "Lekki, Lagos",
+    "description": "A popular private beach offering music, nightlife, and local seafood."
+  },
+  {
+    "name": "Balogun Market",
+    "image": "images/balogun-market.webp",
+    "address": "Lagos Island",
+    "description": "Bustling open-air market famous for fabrics, fashion, and local goods."
+  },
+  {
+    "name": "Terra Kulture",
+    "image": "images/terra-kulture.webp",
+    "address": "Victoria Island, Lagos",
+    "description": "A cultural center for Nigerian theatre, art, literature, and food."
+  },
+  {
+    "name": "Eko Atlantic City",
+    "image": "images/eko-atlantic.webp",
+    "address": "Victoria Island, Lagos",
+    "description": "A new coastal city development with modern infrastructure and business opportunities."
+  }
+]
