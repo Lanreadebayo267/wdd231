@@ -1,0 +1,137 @@
+[
+  {
+    "id":"r1",
+    "name":"Bean & Plantain Pottage (Isiewu-style)",
+    "ingredients":["Black-eyed peas","Ripe plantain","Tomato","Onion","Palm oil (or vegetable)"],
+    "prepTime":45,
+    "origin":"Southwest Nigeria",
+    "image":"images/bean-plantain.webp",
+    "description":"A savory and hearty pottage made with beans and ripe plantain adapted to a plant-based diet."
+  },
+  {
+    "id":"r2",
+    "name":"Egusi with Spinach (Vegetarian)",
+    "ingredients":["Egusi (melon seeds)","Spinach","Palm oil substitute","Ground pepper","Onion"],
+    "prepTime":35,
+    "origin":"Southern Nigeria",
+    "image":"images/egusi-spinach.webp",
+    "description":"Traditional egusi using spinach and mushroom substitute for texture; rich and filling."
+  },
+  {
+    "id":"r3",
+    "name":"Jollof Rice (Vegan)",
+    "ingredients":["Long-grain rice","Tomato paste","Bell pepper","Carrot","Vegetable stock"],
+    "prepTime":40,
+    "origin":"West Africa",
+    "image":"images/jollof.webp",
+    "description":"A vegan take on the beloved jollof with mixed veggies and smoky tomato base."
+  },
+  {
+    "id":"r4",
+    "name":"Yam Porridge (Asaro) – Vegetarian",
+    "ingredients":["Yam","Tomato","Spinach","Onion","Seasoning"],
+    "prepTime":30,
+    "origin":"Southwestern Nigeria",
+    "image":"images/yam-porridge.webp",
+    "description":"Creamy yam porridge enriched with vegetables and spices."
+  },
+  {
+    "id":"r5",
+    "name":"Peppered Tomato Stew with Tofu",
+    "ingredients":["Tofu","Tomato","Scotch bonnet","Onion","Seasoning cubes (vegan)"],
+    "prepTime":25,
+    "origin":"Nigerian Homecook",
+    "image":"images/tofu-stew.webp",
+    "description":"Spicy tomato stew with tofu chunks — great with rice or boiled yam."
+  },
+  {
+    "id":"r6",
+    "name":"Spiced Okra & Palm Oil-free Sauce",
+    "ingredients":["Okra","Tomato","Onion","Ground crayfish substitute","Seasonings"],
+    "prepTime":20,
+    "origin":"Southern Nigeria",
+    "image":"images/okra.webp",
+    "description":"Slimy okra cooked with pepper and tomato but without animal products."
+  },
+  {
+    "id":"r7",
+    "name":"African Peanut Stew (Vegan)",
+    "ingredients":["Peanut butter","Tomato","Sweet potato","Spinach","Ginger"],
+    "prepTime":40,
+    "origin":"West African Inspired",
+    "image":"images/peanut-stew.webp",
+    "description":"Creamy peanut stew with sweet potato and leafy greens — warming and nutritious."
+  },
+  {
+    "id":"r8",
+    "name":"Moin Moin (Steamed Bean Cake) – Vegan",
+    "ingredients":["Ground beans","Bell pepper","Onion","Seasoning","Palm oil optional"],
+    "prepTime":60,
+    "origin":"Southwest Nigeria",
+    "image":"images/moinmoin.webp",
+    "description":"Protein-rich steamed bean pudding, traditionally wrapped and steamed."
+  },
+  {
+    "id":"r9",
+    "name":"Coconut Rice with Roasted Veggies",
+    "ingredients":["Rice","Coconut milk","Mixed vegetables","Garlic","Herbs"],
+    "prepTime":30,
+    "origin":"Coastal Flavors",
+    "image":"images/coconut-rice.webp",
+    "description":"Fragrant coconut rice served with a medley of roasted local vegetables."
+  },
+  {
+    "id":"r10",
+    "name":"Bitterleaf & Yam Stir (Light)",
+    "ingredients":["Bitterleaf","Yam cubes","Garlic","Chili","Palm oil substitute"],
+    "prepTime":25,
+    "origin":"Southern Nigeria",
+    "image":"images/bitterleaf-yam.webp",
+    "description":"Stirred yam with bitterleaf and spices for a light but flavorful meal."
+  },
+  {
+    "id":"r11",
+    "name":"Akara (Bean Fritters) – Air-fried Vegan",
+    "ingredients":["Ground black-eyed peas","Onion","Chili","Vegetable oil spray","Salt"],
+    "prepTime":35,
+    "origin":"West Africa",
+    "image":"images/akara.webp",
+    "description":"Air-fried akara for a lighter version of the protein-packed fritters."
+  },
+  {
+    "id":"r12",
+    "name":"Efo Riro (Leafy Green Stew) – Plant-based",
+    "ingredients":["Ugu or spinach","Tomato","Mushroom substitute","Onion","Pepper"],
+    "prepTime":30,
+    "origin":"Southwest Nigeria",
+    "image":"images/efo-riro.webp",
+    "description":"Leafy vegetable stew enriched with mushrooms and local spices."
+  },
+  {
+    "id":"r13",
+    "name":"Swallow & Veggie Soup (Light)",
+    "ingredients":["Garri or pounded yam","Vegetable soup base","Vegetables","Spicy pepper"],
+    "prepTime":50,
+    "origin":"Pan-Nigerian",
+    "image":"images/swallow-veg.webp",
+    "description":"Classic swallow served with a light vegetable soup for balance."
+  },
+  {
+    "id":"r14",
+    "name":"Cassava Fritters with Pepper Relish",
+    "ingredients":["Cassava","Onion","Pepper","Salt","Oil"],
+    "prepTime":35,
+    "origin":"Coastal Nigeria",
+    "image":"images/cassava-fritters.webp",
+    "description":"Crunchy cassava bites with a spicy relish — perfect as a snack."
+  },
+  {
+    "id":"r15",
+    "name":"Garden Salad with Tiger Nut Vinaigrette",
+    "ingredients":["Tiger nut milk vinaigrette","Lettuce","Tomato","Cucumber","Roasted nuts"],
+    "prepTime":15,
+    "origin":"Modern Nigerian Fusion",
+    "image":"images/garden-salad.webp",
+    "description":"Fresh salad dressed with a creamy tiger nut vinaigrette for local flavor."
+  }
+]

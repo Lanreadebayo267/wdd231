@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Submit a Recipe — GreenPlate</title>
+  <meta name="description" content="Submit your plant-based recipe to GreenPlate. Received entries are shown on the confirmation page.">
+  <meta name="author" content="Olanrewaju Adebayo">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script type="module" defer src="scripts/main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img class="logo" src="images/logo.webp" alt="GreenPlate logo" width="56" height="56">
+        <span class="brand-text">GreenPlate</span>
+      </a>
+
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">☰</button>
+
+      <nav id="primary-nav" class="primary-nav hidden" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="submit.html" class="active">Submit Recipe</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Submit Your Plant-Based Recipe</h1>
+    <form id="recipe-form" method="get" action="submit.html">
+      <label for="name">Recipe Name*</label>
+      <input id="name" name="name" required>
+
+      <label for="origin">Origin / Region</label>
+      <input id="origin" name="origin">
+
+      <label for="prepTime">Prep Time (mins)</label>
+      <input id="prepTime" name="prepTime" type="number" min="1">
+
+      <label for="ingredients">Ingredients (comma separated)</label>
+      <textarea id="ingredients" name="ingredients" rows="3"></textarea>
+
+      <label for="desc">Short description</label>
+      <textarea id="desc" name="desc" rows="4"></textarea>
+
+      <input type="hidden" name="submittedAt" id="submittedAt">
+
+      <button class="btn" type="submit">Submit</button>
+    </form>
+
+    <section id="confirmation">
+      <h2>Submitted Data</h2>
+      <div id="submitted-data"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© <span id="year"></span> GreenPlate</p>
+      <p><a id="video-link" href="#" target="_blank" rel="noopener">Demo Video</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Display submitted data from URLSearchParams (form action behavior)
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('submittedAt').value = new Date().toISOString();
+      const params = new URLSearchParams(window.location.search);
+      const container = document.getElementById('submitted-data');
+      if (!params.toString()) {
+        container.innerHTML = '<p>No submission yet. Fill the form and submit to see the results here.</p>';
+        return;
+      }
+      const ul = document.createElement('ul');
+      for (const [key, val] of params.entries()) {
+        const li = document.createElement('li');
+        li.textContent = `${key}: ${val}`;
+        ul.appendChild(li);
+      }
+      container.innerHTML = '';
+      container.appendChild(ul);
+    });
+  </script>
+</body>
+</html>

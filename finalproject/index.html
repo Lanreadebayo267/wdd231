@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GreenPlate: Nigerian-inspired plant-based recipes, rips, and user-submitted dishes.">
+    <meta name="author" content="Olanrewaju Adebayo">
+    <title>GreenPlate - Nigerian Based Recipes</title>
+    <!-- Open Graph -->
+    <meta property="og:title" content="GreenPlate - Nigerian Plant-Based Recipes">
+    <meta property="og:description" content="Discover healthy Nigerian plant-based meals and recipe ideas.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/greenplate-og.webp">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script type="module" defer src="scripts/main.js"></script>
+</head>
+<body>
+    <header class="site-header" role="banner">
+        <div class="header-inner">
+            <a class="brand" href="index.html">
+                <img class="logo" src="images/logo.webp" alt="GreenPlate logo" width="56" height="56">
+                <span class="brand-text">GreenPlate</span>
+            </a>
+
+            <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">☰</button>
+
+            <nav id="primary-nav" class="primary-nav-hidden" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="submit.html">Submit Recipe</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" id="main">
+        <section class="hero">
+            <img src="images/hero.webp" alt="Colorful plant-based dishes" class="hero-image" loading="lazy">
+            <div class="hero-content">
+                <h1>GreenPlate</h1>
+                <p>Celebrating plant-based Nigerian dishes — healthy, local, delicious.</p>
+                <p><a class="btn" href="recipes.html">Explore Recipes</a> <a class="btn ghost" href="submit.html">Share a Recipe</a></p>
+            </div>
+        </section>
+
+        <section class="why">
+            <h2>Why GreenPlate?</h2>
+            <p>Plant-based versions of Nigerian favorites help improve health, reduce environmental impact, and showcase our culinary heritage in fresh ways.</p>
+            <ul class="features">
+                <li>Authentic Nigerian-inspired recipes</li>
+                <li>Ingredient substitutions and prep tips</li>
+                <li>User-submitted recipes & local community focus</li>
+            </ul>
+        </section>
+
+        <section class="quick-grid">
+            <article>
+                <h3>Local Ingredients</h3>
+                <p>Find plant alternatives using local staples like beans, yams, cassava and leafy greens.</p>
+            </article>
+            <article>
+                <h3>Meal Prep</h3>
+                <p>Quick swaps and batch-cooking ideas to save time and eat healthy all week.</p>
+            </article>
+            <article>
+                <h3>Community</h3>
+                <p>Share your recipes and see others from across Nigeria.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-inner">
+            <p>&copy; <span id="year"></span> GreenPlate - Nigerian Plant-Based Recipes</p>
+            <p><a id="video-link" href="#" target="_blank" rel="noopener">Demo Video</a></p>
+        </div>
+    </footer>
+</body>
+</html>

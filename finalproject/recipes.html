@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenPlate - Recipes</title>
+    <meta name="description" content="Browse 15+ Nigerian plant-based recipes with ingredients, prep time, origin, and tips.">
+    <meta name="author" content="Olanrewaju Adebayo">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- ES Modules -->
+    <script type="module" defer src="scripts/recipes.js"></script>
+    <script type="module" defer src="scripts/main.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">
+                <img class="logo" src="images/logo.webp" alt="GreenPlate Logo" width="56" height="56">
+                <span class="brand-text">GreenPlate</span>
+            </a>
+
+            <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">☰</button>
+
+            <nav id="primary-nav" class="primary-nav hidden" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="recipes.html" class="active">Recipes</a></li>
+                    <li><a href="submit.html">Submit Recipe</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 class="page-title">Plant-Based Nigerian Recipes</h1>
+
+        <section id="visit-message" class="visit-message" aria-live="polite"></section>
+
+        <section class="controls">
+            <label for="filter">Filter by origin:</label>
+            <select id="filter" aria-label="Filter recipes by origin">
+                <option value="all">All</option>
+            </select>
+
+            <label for="search" class="sr-only">Search recipes</label>
+            <input id="search" type="search" placeholder="Search recipes...">
+        </section>
+
+        <!-- The grid uses named grid areas in CSS -->
+        <section id="recipes-grid" class="recipes-grid"  aria-live="polite">
+            <!-- JS will populate 15+ recipe cards here -->
+        </section>
+
+        <!-- Modal (accessible) -->
+        <dialog id="detailModal" aria-labelledby="modalTitle">
+            <button id="modalClose" class="modal-close" aria-label="Close dialog">✕</button>
+            <h2 id="modalTitle"></h2>
+            <p id="modalOrigin"></p>
+            <p id="modalPrep"></p>
+            <h3>Ingredients</h3>
+            <ul id="modalIngredients"></ul>
+            <p id="modalDescription"></p>
+            <button id="favToggle">Add to Favorites</button>
+        </dialog> 
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>&copy; <span id="year"></span> GreenPlate</p>
+            <p><a id="video-link" href="#" target="_blank" rel="noopener">Demo Video</a></p>
+        </div>
+    </footer>
+</body>
+</html>
